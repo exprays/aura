@@ -28,6 +28,7 @@ export const Navbar = () => {
                 border-b
                 border-primary/10
                 bg-secondary
+                h-16
             "
         >
             <div className="flex items-center">
