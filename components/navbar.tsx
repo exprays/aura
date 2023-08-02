@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./theme-toggle";
+import { MobileSidebar } from "./mobile-sidebar";
 
 const font = Poppins({
     weight: "600",
@@ -32,7 +33,7 @@ export const Navbar = () => {
             "
         >
             <div className="flex items-center">
-                <Menu className="block md:hidden"/>
+                <MobileSidebar />
                 <Link href="/">
                     <h1 className={cn("hidden md:block text-xl md:text-3xl font-bold text-primary",
                         font.className
