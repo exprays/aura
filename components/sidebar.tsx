@@ -18,7 +18,7 @@ const routes = [
     },
     {
         icon: Plus,
-        href: "/companion/new",
+        href: "/aura/new",
         label: "Create",
         pro: false,
     },
