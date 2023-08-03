@@ -88,7 +88,7 @@ export const AuraForm = ({
         try {
             if (initialData) {
                 //update aura func
-                await axios.patch(`api/aura/${initialData.id}`, values)
+                await axios.patch(`/api/aura/${initialData.id}`, values)
             } else {
                 // create aura func
                 await axios.post("/api/aura", values)
