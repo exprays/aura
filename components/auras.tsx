@@ -2,7 +2,7 @@ import { Aura } from "@prisma/client"
 import Image from "next/image";
 import { Card, CardFooter, CardHeader } from "./ui/card";
 import Link from "next/link";
-import { MessageSquare } from "lucide-react";
+import { MessagesSquare } from "lucide-react";
 
 interface AuraProps {
     data: (Aura & {
@@ -98,7 +98,7 @@ export const Auras = ({
                                 @{item.userName}
                             </p>
                             <div className="flex items-center">
-                                <MessageSquare className="w-3 h-3 mr-1"/>
+                                <MessagesSquare className="w-3 h-3 mr-1"/>
                                 {item._count.messages}
                             </div>
                         </CardFooter>
