@@ -30,6 +30,7 @@ export async function PATCH(
         const aura = await prismadb.aura.update({
             where: {
                 id: params.auraId,
+                userId: user.id,
             },
             data: {
                 categoryId,
