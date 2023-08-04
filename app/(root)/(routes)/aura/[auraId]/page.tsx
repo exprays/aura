@@ -1,6 +1,8 @@
 import prismadb from "@/lib/prismadb";
 
 import { AuraForm } from "./interface/auraform";
+import { auth, redirectToSignIn } from "@clerk/nextjs";
+
 
 interface AuraIdPageProps {
     params: {
@@ -13,11 +15,18 @@ const AuraIdPage = async ({
     params
 }: AuraIdPageProps) => {
 
+    const { userId } = auth();
+
     //TODO: check subscription
+
+    if (!userId) {
+        return redirectToSignIn();
+    }
 
     const aura = await prismadb.aura.findUnique({
         where: {
-            id: params.auraId
+            id: params.auraId,
+            userId
         }
     });
 
