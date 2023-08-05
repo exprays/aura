@@ -5,6 +5,7 @@ import { Aura, Message } from "@prisma/client";
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
 import { useCompletion } from "ai/react";
+import { ChatForm } from "@/components/chatform";
 
 interface ChatClientProps {
     aura: Aura & {
@@ -61,6 +62,12 @@ export const ChatClient = ({
 			<div>
 				Messages
 			</div>
+			<ChatForm
+				isLoading={isLoading}
+				input={input}
+				handleInputChange={handleInputChange}
+				onSubmit={onSubmit}
+			/>
         </div>
     )
 }
