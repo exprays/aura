@@ -45,11 +45,11 @@ const ChatIdPage = async ({
         return redirect("/");
     }
 
-    return ( 
-        <div>
+    return (
+
             <ChatClient aura={aura}/>
-        </div>
+
      );
 }
- 
+
 export default ChatIdPage;

@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
 import { useCompletion } from "ai/react";
 import { ChatForm } from "@/components/chatform";
+import { ChatMessages } from "@/components/chatmessages";
+import { ChatMessageProps } from "@/components/chatmessage";
 
 interface ChatClientProps {
     aura: Aura & {
@@ -21,7 +23,7 @@ export const ChatClient = ({
 }: ChatClientProps) => {
 
 	const router = useRouter();
-	const [messages, setMessages] = useState<any[]>(aura.messages);
+	const [messages, setMessages] = useState<ChatMessageProps[]>(aura.messages);
 
 	const {
 		input,
@@ -32,7 +34,7 @@ export const ChatClient = ({
 	} = useCompletion({
 		api: `/api/chat/${aura.id}`,  // waiting for the response of api which will generate response of AI model
 		onFinish(prompt, completion) {
-			const systemMessage = {   // Store the response
+			const systemMessage: ChatMessageProps = {   // Store the response
 				role: "system",
 				content: completion,
 			}
@@ -45,7 +47,7 @@ export const ChatClient = ({
 	});
 
 	const onSubmit = (e: FormEvent<HTMLFormElement>) => {
-		const userMessage = {        // Storing the user response
+		const userMessage: ChatMessageProps = {        // Storing the user response
 			role: "user",
 			content: input,
 		};
@@ -59,9 +61,11 @@ export const ChatClient = ({
     return (
         <div className="flex flex-col h-full p-4 space-y-2">
             <ChatHeader aura={aura}/>
-			<div>
-				Messages
-			</div>
+			<ChatMessages
+				aura={aura}
+				isLoading={isLoading}
+				messages={messages}
+			/>
 			<ChatForm
 				isLoading={isLoading}
 				input={input}
