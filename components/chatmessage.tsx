@@ -2,13 +2,13 @@
 
 import { useTheme } from "next-themes";
 import { BeatLoader } from "react-spinners";
+import { Copy } from "lucide-react";
 
 import { useToast } from "./ui/use-toast";
 import { cn } from "@/lib/utils";
 import { BotAvatar } from "./botavatar";
 import { UserAvatar } from "./useravatar";
 import { Button } from "./ui/button";
-import { Copy } from "lucide-react";
 
 export interface ChatMessageProps {
 	role: "system" | "user",
@@ -35,6 +35,7 @@ export const ChatMessage = ({
 		navigator.clipboard.writeText(content);
 		toast({
 			description: "Message copied to clipboard",
+			duration: 3000,
 		})
 	}
 
