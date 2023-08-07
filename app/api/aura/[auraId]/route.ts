@@ -1,4 +1,5 @@
 import prismadb from "@/lib/prismadb";
+import { checkSubscription } from "@/lib/subscription";
 import { auth, currentUser } from "@clerk/nextjs";
 import { NextResponse } from "next/server"
 
@@ -24,6 +25,11 @@ export async function PATCH(
         }
 
         //check for subscription
+		const isPro = await checkSubscription();
+
+		if (!isPro) {
+			return new NextResponse("Pro subscription required", { status: 403 });
+		}
 
 
         //aura database creation
@@ -57,7 +63,7 @@ export async function DELETE(
     { params }: { params: { auraId: string } }
 ) {
     try {
-        
+
         const { userId } = auth();
 
         if (!userId) {

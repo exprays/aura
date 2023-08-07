@@ -8,13 +8,23 @@ import { UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./theme-toggle";
 import { MobileSidebar } from "./mobile-sidebar";
+import { useProModal } from "@/hooks/usepromodal";
 
 const font = Poppins({
     weight: "600",
     subsets: ["latin"]
-})
+});
 
-export const Navbar = () => {
+interface NavBarProps {
+	isPro: boolean;
+}
+
+export const Navbar = ({
+	isPro
+}: NavBarProps) => {
+
+	const proModal = useProModal();
+
     return (
         <div
             className="
@@ -49,9 +59,10 @@ export const Navbar = () => {
                     gap-x-3
                 "
             >
-                <Button variant="rose" size="sm">
+				{!isPro && (
+                <Button onClick={proModal.onOpen} variant="rose" size="sm">
                     Upgrade
-                    <Sparkles 
+                    <Sparkles
                         className="
                             h-4
                             w-4
@@ -61,6 +72,7 @@ export const Navbar = () => {
                         "
                     />
                 </Button>
+				)}
                 <ModeToggle />
                 <UserButton afterSignOutUrl="/"/>
             </div>

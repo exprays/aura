@@ -2,12 +2,20 @@
 
 import { Home, Plus, Settings } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
+import { useProModal } from "@/hooks/usepromodal";
 
-export const Sidebar = () => {
+interface SidebarPro {
+	isPro: boolean;
+}
+
+export const Sidebar = ({
+	isPro
+}: SidebarPro) => {
 
 const pathname = usePathname();
 const router = useRouter();
+const proModal = useProModal();
 
 const routes = [
     {
@@ -20,7 +28,7 @@ const routes = [
         icon: Plus,
         href: "/aura/new",
         label: "Create",
-        pro: false,
+        pro: true,
     },
     {
         icon: Settings,
@@ -33,6 +41,10 @@ const routes = [
 
 const onNavigate = (url: string, pro: boolean) => {
     //TODO: checking pro membership
+
+	if (pro && !isPro) {
+		return proModal.onOpen();
+	}
 
     return router.push(url);
 }
@@ -51,7 +63,7 @@ const onNavigate = (url: string, pro: boolean) => {
             <div className="p-3 flex flex-1 justify-center">
                 <div className="space-y-2">
                     {routes.map((route) => (
-                        <div 
+                        <div
                             onClick={() => onNavigate(route.href, route.pro)}
                             key={route.href}
                             className={cn(`
@@ -69,7 +81,7 @@ const onNavigate = (url: string, pro: boolean) => {
                                 transition
                                 `,
                                 pathname === route.href && "bg-primary/10 text-primary"
-                                 
+
                                 )}
 
                         >

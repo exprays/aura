@@ -38,7 +38,7 @@ export async function GET() {
 		const stripeSession = await stripe.checkout.sessions.create({
 			success_url: settingsUrl,
 			cancel_url: settingsUrl,
-			payment_method_types: ["card", "alipay", "paypal", "wechat_pay", "ideal"],
+			payment_method_types: ["card"],
 			mode: "subscription",
 			billing_address_collection: "auto",
 			customer_email: user.emailAddresses[0].emailAddress,
@@ -48,7 +48,7 @@ export async function GET() {
 						currency: "USD",
 						product_data: {
 							name: "Aura Pro",
-							description: "Create custome Auras"
+							description: "Create custom Auras"
 						},
 						unit_amount: 500,
 						recurring: {
