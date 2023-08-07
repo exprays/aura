@@ -21,7 +21,7 @@ model Aura {
   userName String
   src String
   name String @db.Text
-  description String 
+  description String
   instructions String @db.Text
   seed String @db.Text
 
@@ -55,4 +55,13 @@ model Message {
   aura Aura @relation(fields: [auraId], references: [id], onDelete: Cascade)
 
   @@index([auraId])
+}
+
+model UserSubscription {
+	id String @id @default(uuid())
+	userId String @unique
+	stripeCustomerId  String? @unique @map(name: "stripe_customer_id")
+	stripeSubscriptionId String? @unique @map(name: "stripe_subscription_id")
+	stripePriceId String? @unique @map(name: "stripe_price_id")
+	stripeCurrentPeriodEnd DateTime? @unique @map(name: "stripe_current_period_id")
 }
