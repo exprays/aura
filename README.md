@@ -31,6 +31,8 @@ A place where you can create Your own AI chatbots and use them for your needs!
 
 **Server:** NextJS
 
+**Testing:** Jest, Storybook
+
 **Databases-** 
 
         Planetscale: For chat history and user info storing
