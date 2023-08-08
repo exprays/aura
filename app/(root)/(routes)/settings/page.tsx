@@ -1,4 +1,6 @@
 import { SubscriptionButton } from "@/components/subscription-button";
+import { Button } from "@/components/ui/button";
+import Userprofile from "@/components/userprofile";
 import { checkSubscription } from "@/lib/subscription";
 
 const SettingsPage = async () => {
@@ -11,6 +13,7 @@ const SettingsPage = async () => {
         {isPro ? "You are currently on a Pro plan." : "You are currently on a free plan."}
       </div>
       <SubscriptionButton isPro={isPro} />
+
     </div>
    );
 }
