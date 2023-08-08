@@ -65,10 +65,10 @@ export const ImageUpload = ({
                         h-40
                         w-40
                     ">
-                        <Image 
+                        <Image
                             fill
                             alt="upload"
-                            src={value || "/placeholder.gif"}
+							src={value || "/placeholder.gif"}
                             className="rounded-lg object-cover"
                         />
                     </div>
