@@ -112,7 +112,7 @@ export const AuraForm = ({
     return (
         <div className="h-full p-4 space-y-2 max-w-3xl mx-auto">
             <Form {...form}>
-                <form 
+                <form
                     onSubmit={form.handleSubmit(onSubmit)}
                     className="space-y-8 pb-10"
                 >
@@ -127,7 +127,7 @@ export const AuraForm = ({
                         </div>
                         <Separator className="bg-primary/10"/>
                     </div>
-                    <FormField 
+                    <FormField
                         name="src"
                         render={({ field }) => (
                             <FormItem className="
@@ -136,11 +136,11 @@ export const AuraForm = ({
                                 items-center
                                 justify-center
                                 space-y-4
-                                
+
                             ">
 
                                 <FormControl>
-                                    <ImageUpload 
+                                    <ImageUpload
                                         disabled={isLoading}
                                         onChange={field.onChange}
                                         value={field.value}
@@ -152,7 +152,7 @@ export const AuraForm = ({
                         )}
                     />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <FormField 
+                        <FormField
                             name="name"
                             control={form.control}
                             render={({ field }) => (
@@ -161,7 +161,7 @@ export const AuraForm = ({
                                         Name
                                     </FormLabel>
                                     <FormControl>
-                                        <Input 
+                                        <Input
                                             disabled={isLoading}
                                             placeholder="Elon Musk"
                                             {...field}
@@ -174,7 +174,7 @@ export const AuraForm = ({
                                 </FormItem>
                             )}
                         />
-                        <FormField 
+                        <FormField
                             name="description"
                             control={form.control}
                             render={({ field }) => (
@@ -183,7 +183,7 @@ export const AuraForm = ({
                                         Description
                                     </FormLabel>
                                     <FormControl>
-                                        <Input 
+                                        <Input
                                             disabled={isLoading}
                                             placeholder="CEO & Founder of Tesla & Space X"
                                             {...field}
@@ -196,7 +196,7 @@ export const AuraForm = ({
                                 </FormItem>
                             )}
                         />
-                        <FormField 
+                        <FormField
                             name="categoryId"
                             control={form.control}
                             render={({ field }) => (
@@ -210,7 +210,7 @@ export const AuraForm = ({
                                     >
                                         <FormControl>
                                             <SelectTrigger className="bg-background">
-                                                <SelectValue 
+                                                <SelectValue
                                                     defaultValue={field.value}
                                                     placeholder="Select a category"
                                                 />
@@ -237,7 +237,7 @@ export const AuraForm = ({
                     </div>
                     <div className="space-y-2 w-full">
                         <div>
-                            <h3 className="text-lg font-medium bg-gradient-to-r from-pink-600 via-purple-500 to-rose-500 bg-clip-text text-transparent animate-text">
+                            <h3 className="text-lg font-medium bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent animate-text">
                                 Configuration
                             </h3>
                             <p className="text-sm text-muted-foreground">
@@ -246,7 +246,7 @@ export const AuraForm = ({
                         </div>
                         <Separator className="bg-primary/10"/>
                     </div>
-                    <FormField 
+                    <FormField
                             name="instructions"
                             control={form.control}
                             render={({ field }) => (
@@ -257,20 +257,20 @@ export const AuraForm = ({
                                     <FormControl>
                                         <Textarea
                                             className="bg-background resize-none"
-                                            rows={7} 
+                                            rows={7}
                                             disabled={isLoading}
                                             placeholder={PREAMBLE}
                                             {...field}
                                         />
                                     </FormControl>
                                     <FormDescription>
-                                        Describe your Aura&apos;s backstory & relevant details in detail! 
+                                        Describe your Aura&apos;s backstory & relevant details in detail!
                                     </FormDescription>
                                     <FormMessage />
                                 </FormItem>
                             )}
                         />
-                        <FormField 
+                        <FormField
                             name="seed"
                             control={form.control}
                             render={({ field }) => (
@@ -281,7 +281,7 @@ export const AuraForm = ({
                                     <FormControl>
                                         <Textarea
                                             className="bg-background resize-none"
-                                            rows={7} 
+                                            rows={7}
                                             disabled={isLoading}
                                             placeholder={SEED_CHAT}
                                             {...field}
@@ -299,7 +299,7 @@ export const AuraForm = ({
                                     size="lg"
                                     disabled={isLoading}
                                     className="hover:scale-110"
-                                    variant="rose"
+                                    variant="nl"
                                 >
                                     {initialData ? "Edit Your Aura": "Create your Aura"}
                                     <Wand2 className="w-4 h-4 ml-2"/>

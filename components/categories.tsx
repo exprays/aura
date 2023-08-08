@@ -48,7 +48,7 @@ export const Categories = ({
                     hover:opacity-75
                     transition
                 `,
-                    !categoryId ? "bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent" : "bg-primary/10"
+                    !categoryId ? "bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent" : "bg-primary/10"
                 )}
             >
                 Newest
@@ -72,7 +72,7 @@ export const Categories = ({
                                 hover:opacity-75
                                 transition
                         `,
-                            item.id === categoryId ? "bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent" : "bg-primary/10"
+                            item.id === categoryId ? "bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent" : "bg-primary/10"
                         )}
                         >
                             {item.name}

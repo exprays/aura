@@ -39,7 +39,7 @@ export const ChatForm = ({
 				placeholder="Type a message"
 				className="rounded-lg bg-primary/10"
 			/>
-			<Button disabled={isLoading} variant={"rose"}>
+			<Button disabled={isLoading} variant={"nl"}>
 				<SendHorizonal className="h-6 w-6"/>
 			</Button>
 		</form>

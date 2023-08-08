@@ -49,9 +49,9 @@ export const Navbar = () => {
                     gap-x-3
                 "
             >
-                <Button variant="rose" size="sm">
+                <Button variant="nl" size="sm">
                     Upgrade
-                    <Sparkles 
+                    <Sparkles
                         className="
                             h-4
                             w-4
