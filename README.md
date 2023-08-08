@@ -1,4 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+![logo](https://github.com/0rbitSoc/aura/blob/master/public/aura.png)
+
+
+
+# aura.ai
+
+A place where you can create Your own AI chatbots and use them for your needs!
+
+
+
+
+## 📱Features
+
+- Light/dark mode toggle
+- Built with llama-2-13b
+- Responsive design 
+- Cross platform
+- Long term AI memory with redis
+- Payment with stripe (upcoming)
+- Image upload with cloudinary (will switch to AWS S3)
+- Chat history
+- CRUD of chatbots
+
+
+
+## 💻Tech Stack
+
+**Client:** React, NextJS, TailwindCSS Shadcn-ui
+
+**Server:** NextJS
+
+**Databases-** 
+
+        Planetscale: For chat history and user info storing
+        Redis: For long-term Memory
+        Pinecone: Vector database for AI interactions
+
+**Others:** Prism(ORM), lucide-react icons, Clerk(auth), Replicate(ML model runner)
+
+
+
+
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
+## Documentation
+
+[Documentation](https://linktodocumentation)
+
+For aura configs find bots folder inside this repo!
 
 ## Getting Started
 
@@ -27,8 +78,4 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
