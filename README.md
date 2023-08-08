@@ -1,7 +1,6 @@
 
-![logo](https://github.com/0rbitSoc/aura/blob/master/public/aura.png)
 
-
+![logo](https://github.com/0rbitSoc/aura/assets/133385746/8e75b187-4d06-4e45-9833-65baea4f9012)
 
 # aura.ai
 
@@ -40,9 +39,7 @@ A place where you can create Your own AI chatbots and use them for your needs!
 
 
 
-
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![blog (1)](https://github.com/0rbitSoc/aura/assets/133385746/e6682123-6855-421d-bdab-68e2e7f52a39)
 
 
 ## Documentation
