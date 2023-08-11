@@ -45,7 +45,7 @@ export async function GET() {
 			line_items: [
 				{
 					price_data: {
-						currency: "USD",
+						currency: "INR",
 						product_data: {
 							name: "Aura Pro",
 							description: "Create custom Auras"
