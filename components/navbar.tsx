@@ -9,6 +9,7 @@ import { Button } from "./ui/button";
 import { ModeToggle } from "./theme-toggle";
 import { MobileSidebar } from "./mobile-sidebar";
 import { useProModal } from "@/hooks/usepromodal";
+import Image from "next/image";
 
 const font = Poppins({
     weight: "600",
@@ -45,11 +46,14 @@ export const Navbar = ({
             <div className="flex items-center">
                 <MobileSidebar isPro={isPro}/>
                 <Link href="/">
-                    <h1 className={cn("hidden md:block text-xl md:text-3xl font-bold text-primary",
-                        font.className
-                    )}>
-                        aura.ai
-                    </h1>
+                    <div className="flex items-center mr-4">
+						<Image
+							src={"/aura.png"}
+							alt="logo"
+							width={30}
+							height={30}
+						/>
+					</div>
                 </Link>
             </div>
             <div
