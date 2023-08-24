@@ -50,7 +50,7 @@ export async function GET() {
 							name: "Aura Pro",
 							description: "Create custom Auras"
 						},
-						unit_amount: 5.99,
+						unit_amount: 599,
 						recurring: {
 							interval: "month",
 						}
@@ -64,7 +64,7 @@ export async function GET() {
 		})
 
 
-		return new NextResponse(JSON.stringify({url: stripeSession.url }));
+		return new NextResponse(JSON.stringify({ url: stripeSession.url }));
 
 
 	} catch (error) {
