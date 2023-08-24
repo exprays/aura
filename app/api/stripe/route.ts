@@ -50,7 +50,7 @@ export async function GET() {
 							name: "Aura Pro",
 							description: "Create custom Auras"
 						},
-						unit_amount: 99,
+						unit_amount: 9900,
 						recurring: {
 							interval: "month",
 						}
