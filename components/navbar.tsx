@@ -8,8 +8,8 @@ import { UserButton } from "@clerk/nextjs";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./theme-toggle";
 import { MobileSidebar } from "./mobile-sidebar";
-import { useProModal } from "@/hooks/usepromodal";
 import Image from "next/image";
+import { useProModal } from "@/hooks/usepromodal";
 
 const font = Poppins({
     weight: "600",
@@ -53,6 +53,12 @@ export const Navbar = ({
 							width={30}
 							height={30}
 						/>
+
+						<h1 className={cn("justify-start hidden md:block text-xl md:text-3xl font-bold text-primary pl-4",
+							font.className
+						)}>
+							aura.ai
+						</h1>
 					</div>
                 </Link>
             </div>
