@@ -1,6 +1,7 @@
 
-![logo](https://github.com/0rbitSoc/aura/blob/master/public/aura.png)
 
+
+![logo](https://github.com/0rbitSoc/aura/assets/133385746/a7e58cb3-7b76-4d4d-957f-00e9ab3c9adf)
 
 
 # aura.ai
@@ -30,6 +31,8 @@ A place where you can create Your own AI chatbots and use them for your needs!
 
 **Server:** NextJS
 
+**Testing:** Jest, Storybook
+
 **Databases-** 
 
         Planetscale: For chat history and user info storing
@@ -41,8 +44,9 @@ A place where you can create Your own AI chatbots and use them for your needs!
 
 
 
+![blog](https://github.com/0rbitSoc/aura/assets/133385746/8a5b7e71-4637-495b-b2bc-9bc856996957)
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
 
 
 ## Documentation
