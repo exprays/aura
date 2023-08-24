@@ -46,7 +46,7 @@ export async function POST(
     });
 
     if (!aura) {
-      return new NextResponse("Companion not found", { status: 404 });
+      return new NextResponse("Aura not found", { status: 404 });
     }
 
     const name = aura.id;

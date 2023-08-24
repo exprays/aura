@@ -9,13 +9,23 @@ import { Button } from "./ui/button";
 import { ModeToggle } from "./theme-toggle";
 import { MobileSidebar } from "./mobile-sidebar";
 import Image from "next/image";
+import { useProModal } from "@/hooks/usepromodal";
 
 const font = Poppins({
     weight: "600",
     subsets: ["latin"]
-})
+});
 
-export const Navbar = () => {
+interface NavBarProps {
+	isPro: boolean;
+}
+
+export const Navbar = ({
+	isPro
+}: NavBarProps) => {
+
+	const proModal = useProModal();
+
     return (
         <div
             className="
@@ -34,9 +44,9 @@ export const Navbar = () => {
             "
         >
             <div className="flex items-center">
-                <MobileSidebar />
+                <MobileSidebar isPro={isPro}/>
                 <Link href="/">
-					<div className="flex items-center mr-4">
+                    <div className="flex items-center mr-4">
 						<Image
 							src={"/aura.png"}
 							alt="logo"
@@ -59,7 +69,8 @@ export const Navbar = () => {
                     gap-x-3
                 "
             >
-                <Button variant="nl" size="sm">
+				{!isPro && (
+                <Button onClick={proModal.onOpen} variant="rose" size="sm">
                     Upgrade
                     <Sparkles
                         className="
@@ -71,6 +82,7 @@ export const Navbar = () => {
                         "
                     />
                 </Button>
+				)}
                 <ModeToggle />
                 <UserButton afterSignOutUrl="/"/>
             </div>
