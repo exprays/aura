@@ -70,7 +70,7 @@ export const Navbar = ({
                 "
             >
 				{!isPro && (
-                <Button onClick={proModal.onOpen} variant="rose" size="sm">
+                <Button onClick={proModal.onOpen} variant="nl" size="sm">
                     Upgrade
                     <Sparkles
                         className="

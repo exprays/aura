@@ -33,7 +33,7 @@ export const SubscriptionButton = ({
   };
 
   return (
-    <Button size="sm" variant={isPro ? "default" : "rose"} disabled={loading} onClick={onClick} >
+    <Button size="sm" variant={isPro ? "default" : "nl"} disabled={loading} onClick={onClick} >
       {isPro ? "Manage Subscription" : "Upgrade"}
       {!isPro && <Sparkles className="w-4 h-4 ml-2 fill-white" />}
     </Button>
