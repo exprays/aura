@@ -1,6 +1,5 @@
 import { SubscriptionButton } from "@/components/subscription-button";
 import { Button } from "@/components/ui/button";
-import Userprofile from "@/components/userprofile";
 import { checkSubscription } from "@/lib/subscription";
 
 const SettingsPage = async () => {
