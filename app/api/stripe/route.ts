@@ -45,12 +45,12 @@ export async function GET() {
 			line_items: [
 				{
 					price_data: {
-						currency: "INR",
+						currency: "USD",
 						product_data: {
 							name: "Aura Pro",
 							description: "Create custom Auras"
 						},
-						unit_amount: 500,
+						unit_amount: 5.99,
 						recurring: {
 							interval: "month",
 						}
