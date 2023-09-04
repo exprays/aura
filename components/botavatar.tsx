@@ -1,3 +1,5 @@
+//avatar component
+
 import { Avatar, AvatarImage } from "./ui/avatar";
 
 interface BotAvatarProps {

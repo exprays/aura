@@ -1,5 +1,4 @@
 import { SubscriptionButton } from "@/components/subscription-button";
-import { Button } from "@/components/ui/button";
 import { checkSubscription } from "@/lib/subscription";
 
 const SettingsPage = async () => {
